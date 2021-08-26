@@ -1,0 +1,108 @@
+// main section style
+main.intro {
+  background-color: $lightPurple;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  .clock {
+    color: $white;
+    font-family: $btnFontFamily;
+    font-size: 5rem;
+    position: absolute;
+    top: 5rem;
+    right: 7rem;
+  }
+
+  .btn {
+    background-image: linear-gradient(
+      to right,
+      #d86078 0%,
+      #f09090 51%,
+      #d86078 100%
+    );
+    padding: 1.8rem 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 2rem #eee;
+    display: inline-block;
+    font-family: $btnFontFamily;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .intro-btn {
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    transition: 0.4s ease;
+  }
+
+  .hide-intro-btn {
+    opacity: 0;
+    visibility: hidden;
+    @include transform(rotate(110deg));
+    @include transform(translate(5%, -30%));
+  }
+
+  .rules-list li {
+    margin-left: 5.5rem;
+  }
+
+  .rules {
+    position: fixed;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: $darkBlue;
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.32);
+    padding: 5rem;
+    width: 65%;
+    visibility: hidden;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    opacity: 0;
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 3rem;
+      cursor: pointer;
+      font-size: 3.6rem;
+    }
+  }
+
+  .active-rules {
+    visibility: visible;
+    opacity: 1;
+    top: 50%;
+  }
+
+  // Animation frame for rules
+
+  .rules-btn {
+    text-align: center;
+    margin-top: 5rem;
+  }
+}

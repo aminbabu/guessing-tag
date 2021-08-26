@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field | Guessing Tag</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=IBM+Plex+Sans+Thai+Looped:wght@400;500&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <!-- External Style Sheets -->
+    <link rel="stylesheet" href="../css/style.min.css" />
+  </head>
+  <body>
+    <main class="game-field">
+      <p class="score">Score: <span id="score">0</span></p>
+      <p class="level">Level: <span id="level">0</span></p>
+      <div class="card-container"></div>
+    </main>
+
+    <section class="alert">
+      <h2 class="game-over">Game Over</h2>
+      <div class="alert-content">
+        <p class="alert-score">You Score : <span id="alert-score">0</span></p>
+        <div class="btn-group">
+          <a
+            href="gameField.html"
+            class="btn start-over-btn"
+            id="start-over-btn"
+          >
+            Start Over
+          </a>
+          <a href="#" class="btn try-again-btn" id="try-again"> Try Again! </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom JS -->
+    <script src="../js/game.js"></script>
+  </body>
+</html>

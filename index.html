@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gussing Tag</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=IBM+Plex+Sans+Thai+Looped:wght@400;500&family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <!-- External Style Sheets -->
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+  <body>
+    <main class="intro">
+      <div class="clock" id="clock"></div>
+      <button class="btn intro-btn" id="introBtn">Click To Begin!</button>
+      <div class="rules" id="rules">
+        <ul class="rules-list">
+          <h2><span>⎆</span> Rules:</h2>
+          <li>There will some grid items.</li>
+          <li>
+            First, you should choose one of them and it will be either an HTML
+            opening tag or closing tag.
+          </li>
+          <li>
+            And then, you need to guess the corresponding HTML tag from the rest
+            to score.
+            <p>
+              i.e: Suppose, first you choose a grid item that is an HTML closing
+              tag like <span class="code">&lt;&#47;</span>body<span class="code"
+                >&gt;</span
+              >, then your guess have to be an HTML opening tag like
+              <span class="code">&lt</span>body<span class="code">&gt;</span>
+            </p>
+          </li>
+          <li>If your guess is wrong, then you should start over.</li>
+          <li>
+            If your guess is right, then your score will increase by 1 and keep
+            playing.
+          </li>
+          <li>Be confident and try to guess!</li>
+          <div class="rules-btn">
+            <a href="./game/gameField.html" class="btn">Start Playing</a>
+          </div>
+        </ul>
+        <span class="close-btn" id="introClose">×</span>
+      </div>
+    </main>
+
+    <!-- External JS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

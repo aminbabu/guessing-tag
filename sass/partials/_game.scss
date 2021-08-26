@@ -1,0 +1,163 @@
+.game-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #bce1df;
+  padding: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(75px, 1fr));
+  grid-gap: 6px;
+}
+
+.card-container-1 {
+  grid-template-columns: repeat(3, minmax(75px, 1fr));
+}
+
+.card-container-2 {
+  grid-template-columns: repeat(4, minmax(75px, 1fr));
+}
+
+.score,
+.level {
+  color: #1c9e9e;
+  font-size: 22px;
+  font-weight: 600;
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+}
+
+.level {
+  left: unset;
+  right: -10rem;
+}
+
+.card {
+  perspective: 300px;
+  min-height: 90px;
+  min-width: 90px;
+}
+
+.content {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.active-card .content {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  background-color: #ffffff;
+  backface-visibility: hidden;
+  color: #66b9b9;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  line-height: 90px;
+  width: 100%;
+}
+
+.front {
+  font-size: 56px;
+}
+
+.back {
+  background-color: #1c9e9e;
+  color: #ffffff;
+  font-size: 20px;
+  transform: rotateY(180deg);
+}
+
+.alert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1c9e9e35;
+  display: none;
+
+  .game-over {
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    @include transform(translateX(-50%));
+    font-size: 7rem;
+    color: #f09090;
+  }
+
+  .alert-content {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    @include transform(translateX(-50%));
+
+    .alert-score {
+      color: #d86078;
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .btn-group {
+      margin-top: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 5rem;
+
+      .btn {
+        background-image: linear-gradient(
+          to right,
+          #d86078 0%,
+          #f09090 51%,
+          #d86078 100%
+        );
+        padding: 1.8rem 4rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 2rem #eee;
+        display: inline-block;
+        font-family: $btnFontFamily;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+      }
+
+      .btn:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.active-alert {
+  display: block;
+  animation: gameOver 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+@keyframes gameOver {
+  0% {
+    @include transform(scale(0.2));
+  }
+  90% {
+    @include transform(scale(1));
+  }
+}

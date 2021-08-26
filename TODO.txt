@@ -1,0 +1,5 @@
+@TODO:
+1. create function to generate how many cards will be there in each level - done
+2. create function to level up - done
+3. change gameField container according to game level - done
+4. finishing touch and bug fixing - done

@@ -1,0 +1,12 @@
+// import partials
+@import "./partials/variables";
+@import "./partials/util";
+@import "./partials/reset";
+@import "./partials/index";
+@import "./partials/game";
+
+// body style
+body {
+  font-family: $generalFontFamily;
+  font-size: 1.8rem;
+}
