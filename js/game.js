@@ -243,7 +243,7 @@
         case 3:
           cardContainer.classList.add("card-container-2");
           const randomCard1 = createACard("q");
-          const randomCard2 = createACard("wala");
+          const randomCard2 = createACard("del");
           cardContainer.appendChild(randomCard1);
           cardContainer.appendChild(randomCard2);
           break;
